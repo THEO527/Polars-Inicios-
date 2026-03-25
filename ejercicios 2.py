@@ -1,0 +1,16 @@
+import numpy as np
+
+print("Solucion Unica Sistemas de Ecuaciones")
+A1 = np.array([[2,1,1],[1,3,2],[1,0,0]])
+b1 = np.array([4,5,6])
+print(np.linalg.solve(A1,b1))
+print("Infinitas soluciones")
+A2 = np.array([[1,2,3],[2,4,6],[3,6,9]])
+b2 = np.array([6,12,18])
+print(np.linalg.matrix_rank(A2))
+print(np.linalg.matrix_rank(np.column_stack((A2,b2))))
+print("sin solucion")
+A3 = np.array([[1,1,1],[2,2,2],[3,3,3]])
+b3 = np.array([1,2,5])
+print(np.linalg.matrix_rank(A3))
+print(np.linalg.matrix_rank(np.column_stack((A3,b3))))
